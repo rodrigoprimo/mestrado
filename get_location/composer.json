@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/rodrigoprimo/nominatim-consumer"
+        }
+    ],
+    "require": {
+        "nixilla/nominatim-consumer": "dev-master",
+        "wp-cli/php-cli-tools": "0.10.3"
+    }
+}
