@@ -1,0 +1,4 @@
+sudo aptitude install python-storm
+sudo python setup.py install
+
+/home/rodrigo/devel/Bicho/bin/bicho -d 5 --db-user-out=root --db-password-out='' -b trac_wordpress --db-database-out bicho --backend-user WORDPRESS_ORG_USER --backend-password WORDPRESS_ORG_PASS -u https://core.trac.wordpress.org -g
