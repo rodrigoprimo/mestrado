@@ -7,6 +7,7 @@
     ],
     "require": {
         "nixilla/nominatim-consumer": "dev-master",
-        "wp-cli/php-cli-tools": "0.10.3"
+        "wp-cli/php-cli-tools": "0.10.3",
+        "kriswallsmith/buzz": "v0.13"
     }
 }

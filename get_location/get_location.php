@@ -25,7 +25,7 @@ class GetLocation {
 		$arguments->parse();
 
 		if ($arguments['get-location']) {
-			$this->run();
+			$this->get_location();
 		} else if ($arguments['get-country']) {
 			$this->get_country();
 		} else {
@@ -39,7 +39,12 @@ class GetLocation {
 	 *
 	 * @return null
 	 */
-	public function run() {
+	public function get_location() {
+		if (!file_exists($this->users_path)) {
+			\cli\err('Não foi possível encontrar o arquivo "users" com a lista de usuários. Para um exemplo, ver o arquivo users_example.');
+			die;
+		}
+
 		$users_data_handler = fopen($this->users_data_path, 'a');
 
 		if (!file_exists($this->users_to_skip_path)) {
@@ -75,7 +80,7 @@ class GetLocation {
 	private function get_location_from_wp($user) {
 		$html = file_get_contents('https://profiles.wordpress.org/' . $user);
 
-		if ($http_response_header[0] == 'HTTP/1.1 200 OK') {
+		if (in_array($http_response_header[0], array('HTTP/1.1 200 OK', 'HTTP/1.1 301 Moved Permanently'))) {
 			$doc = new DOMDocument();
 			libxml_use_internal_errors(true);
 			$doc->loadHTML($html);
