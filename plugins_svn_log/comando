@@ -1,8 +1,0 @@
-Para gerar o log dos commits do repositório de plugins do WordPress:
-
-svn log http://plugins.svn.wordpress.org -v
-
-
-Para ler o arquivo de log do SVN usando o CVSAnalY:
-
-python /home/rodrigo/devel/CVSAnalY/cvsanaly2 --repo-logfile=plugins_svn_log  --db-user=root --db-password='' --db-database=wordpress-cvsanaly -g --extensions=FileTypes
