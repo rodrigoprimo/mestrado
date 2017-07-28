@@ -1,0 +1,5 @@
+O arquivo ne_110m_admin_0_countries.zip contem o shapefile do mapa-múndi (baixado da URL http://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/). Nas pastas core e plugin o arquivo dbase deste shape file foi alterado. Uma coluna chamada "wordpress" foi adicionada e nela coloquei o percentual de desenvolvedores do WordPress que estão naquele país para o core e plugins respectivamente.
+
+Os arquivos plugins/plugins.* e core/core.* contem o cartograma que foi gerado utilizando o software Scapetoad (http://scapetoad.choros.ch/). Os arquivos plugins/plugins.png e core/core.png foram gerados a partir do cartograma no Qgis. Pequenas modificações foram feitas neles como exibir uma cor diferente nos países em função do número de desenvolvedores e também a adição de uma legenda. Para isso o seguinte tutorial foi utilizado como referência:
+
+http://gis.yohman.com/blog/2011/11/07/tutorial-building-cartograms/
